@@ -1,9 +1,3 @@
-# List of common female names.
-# Copyright (c) January 1991 by Mark Kantrowitz.
-# 4987 names
-# Thanks to Bill.Ross for about 1000 additional names.
-# Version 1.3 (29-MAR-94)
-
 Abagael
 Abagail
 Abbe
@@ -1020,7 +1014,6 @@ Clarissa
 Clarisse
 Clarita
 Clary
-Claude
 Claudelle
 Claudetta
 Claudette
@@ -1484,7 +1477,6 @@ Ebony
 Eda
 Eddi
 Eddie
-Eddy
 Ede
 Edee
 Edeline
@@ -1912,7 +1904,6 @@ Gennifer
 Genny
 Genovera
 Genvieve
-George
 Georgeanna
 Georgeanne
 Georgena
@@ -2093,7 +2084,6 @@ Hana
 Hanna
 Hannah
 Hanni
-Hannibal
 Hannie
 Hannis
 Hanny
@@ -2211,7 +2201,6 @@ Idell
 Idelle
 Idette
 Ike
-Ikey
 Ilana
 Ileana
 Ileane
@@ -4177,7 +4166,6 @@ Ronica
 Ronna
 Ronni
 Ronnica
-Ronnie
 Ronny
 Roobbie
 Rora
@@ -4703,9 +4691,7 @@ Tillie
 Tilly
 Tim
 Timi
-Timmi
 Timmie
-Timmy
 Timothea
 Tina
 Tine
@@ -4718,7 +4704,6 @@ Tobe
 Tobey
 Tobi
 Tobie
-Toby
 Tobye
 Toinette
 Toma

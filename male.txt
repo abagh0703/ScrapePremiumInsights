@@ -19,7 +19,6 @@ Ace
 Adair
 Adam
 Adams
-Addie
 Adger
 Aditya
 Adlai
@@ -69,7 +68,6 @@ Alessandro
 Alex
 Alexander
 Alexei
-Alexis
 Alf
 Alfie
 Alfonse
@@ -79,7 +77,6 @@ Alford
 Alfred
 Alfredo
 Algernon
-Ali
 Alic
 Alister
 Alix
@@ -116,7 +113,6 @@ Anders
 Andie
 Andonis
 Andre
-Andrea
 Andreas
 Andrej
 Andres
@@ -159,7 +155,6 @@ Archy
 Arel
 Ari
 Arie
-Ariel
 Aristotle
 Arlo
 Armand
@@ -185,7 +180,6 @@ Arvy
 Ash
 Ashby
 Ashish
-Ashley
 Ashton
 Aub
 Aube
@@ -349,7 +343,6 @@ Brian
 Brice
 Briggs
 Brinkley
-Britt
 Brock
 Broddie
 Broddy
@@ -359,7 +352,6 @@ Brodie
 Brody
 Bronson
 Brook
-Brooke
 Brooks
 Bruce
 Bruno
@@ -391,13 +383,10 @@ Caldwell
 Caleb
 Calhoun
 Calvin
-Cam
 Cameron
 Cammy
-Carey
 Carl
 Carleigh
-Carlie
 Carlin
 Carlo
 Carlos
@@ -409,14 +398,10 @@ Carson
 Carsten
 Carter
 Cary
-Caryl
 Case
-Casey
 Caspar
 Casper
 Cass
-Cat
-Cecil
 Cesar
 Chad
 Chadd
@@ -468,11 +453,8 @@ Christy
 Chrisy
 Chuck
 Churchill
-Clair
-Claire
 Clancy
 Clarance
-Clare
 Clarence
 Clark
 Clarke
@@ -513,7 +495,6 @@ Colin
 Collin
 Collins
 Conan
-Connie
 Connolly
 Connor
 Conrad
@@ -535,7 +516,6 @@ Corwin
 Cory
 Cosmo
 Costa
-Courtney
 Craig
 Crawford
 Creighton
@@ -568,7 +548,6 @@ Dannie
 Danny
 Dante
 Darby
-Darcy
 Daren
 Darian
 Darien
@@ -662,7 +641,6 @@ Donnie
 Donny
 Donovan
 Dorian
-Dory
 Doug
 Douggie
 Dougie
@@ -729,7 +707,6 @@ Elihu
 Elijah
 Eliot
 Eliott
-Elisha
 Elliot
 Elliott
 Ellis
@@ -759,7 +736,6 @@ Emmet
 Emmett
 Emmit
 Emmott
-Emmy
 Emory
 Ender
 Engelbart
@@ -806,7 +782,6 @@ Eugene
 Eustace
 Ev
 Evan
-Evelyn
 Everard
 Everett
 Ewan
@@ -868,7 +843,6 @@ Forster
 Foster
 Fowler
 Fox
-Fran
 Francesco
 Francis
 Francisco
@@ -1021,7 +995,6 @@ Goose
 Gordan
 Gordie
 Gordon
-Grace
 Grady
 Graehme
 Graeme
@@ -1069,7 +1042,6 @@ Hakim
 Hal
 Hale
 Haleigh
-Haley
 Hall
 Hallam
 Halvard
@@ -1128,7 +1100,6 @@ Haydon
 Hayes
 Hayward
 Haywood
-Hazel
 Heath
 Heathcliff
 Hebert
@@ -1174,11 +1145,9 @@ Hewitt
 Heywood
 Hezekiah
 Higgins
-Hilary
 Hilbert
 Hill
 Hillard
-Hillary
 Hillel
 Hillery
 Hilliard
@@ -1268,7 +1237,6 @@ Izak
 Izzy
 Jabez
 Jack
-Jackie
 Jackson
 Jacob
 Jacques
@@ -1279,7 +1247,6 @@ Jakob
 James
 Jameson
 Jamey
-Jamie
 Jan
 Janos
 Janus
@@ -1355,8 +1322,6 @@ Joaquin
 Job
 Jock
 Jodi
-Jodie
-Jody
 Joe
 Joel
 Joey
@@ -1392,7 +1357,6 @@ Joshuah
 Josiah
 Jotham
 Juan
-Juanita
 Jud
 Judah
 Judas
@@ -1400,12 +1364,10 @@ Judd
 Jude
 Judith
 Judson
-Judy
 Juergen
 Jule
 Jules
 Julian
-Julie
 Julio
 Julius
 Justin
@@ -1430,9 +1392,6 @@ Keene
 Keil
 Keith
 Kellen
-Kelley
-Kelly
-Kelsey
 Kelvin
 Kelwin
 Ken
@@ -1463,7 +1422,6 @@ Kingston
 Kip
 Kirby
 Kirk
-Kit
 Klaus
 Klee
 Knox
@@ -1472,7 +1430,6 @@ Konstantin
 Kory
 Kostas
 Kraig
-Kris
 Krishna
 Kristian
 Kristopher
@@ -1492,11 +1449,9 @@ Lanny
 Larry
 Lars
 Laurance
-Lauren
 Laurence
 Laurens
 Laurent
-Laurie
 Lawerence
 Lawrence
 Lawson
@@ -1534,8 +1489,6 @@ Leonidas
 Leopold
 Leroy
 Les
-Lesley
-Leslie
 Lester
 Lev
 Levi
@@ -1549,9 +1502,6 @@ Liam
 Lin
 Lincoln
 Lind
-Lindsay
-Lindsey
-Lindy
 Linoel
 Linus
 Lion
@@ -1590,15 +1540,12 @@ Lukas
 Luke
 Luther
 Lyle
-Lyn
 Lyndon
-Lynn
 Mac
 Mace
 Mack
 Mackenzie
 Maddie
-Maddy
 Madison
 Magnum
 Magnus
@@ -1622,7 +1569,6 @@ Marcio
 Marco
 Marcos
 Marcus
-Marietta
 Marilu
 Mario
 Marion
@@ -1632,7 +1578,6 @@ Marko
 Markos
 Markus
 Marlin
-Marlo
 Marlon
 Marlow
 Marlowe
@@ -1706,13 +1651,10 @@ Merle
 Merlin
 Merrel
 Merrick
-Merril
-Merrill
 Merry
 Merv
 Mervin
 Merwin
-Meryl
 Meyer
 Mic
 Micah
@@ -1736,7 +1678,6 @@ Mikel
 Mikey
 Mikhail
 Miles
-Millicent
 Milo
 Milt
 Milton
@@ -1835,14 +1776,12 @@ Nichole
 Nichols
 Nick
 Nickey
-Nickie
 Nickolas
 Nicky
 Nico
 Nicolas
 Niels
 Nigel
-Niki
 Nikita
 Nikki
 Nikolai
@@ -1929,7 +1868,6 @@ Paddie
 Paddy
 Padraig
 Page
-Paige
 Pail
 Palmer
 Paolo
@@ -1951,13 +1889,9 @@ Paten
 Patin
 Paton
 Patric
-Patrice
 Patricio
 Patrick
 Patrik
-Patsy
-Pattie
-Patty
 Paul
 Paulo
 Pavel
@@ -1968,7 +1902,6 @@ Pembroke
 Pen
 Penn
 Pennie
-Penny
 Penrod
 Pepe
 Pepillo
@@ -2211,7 +2144,6 @@ Royce
 Rube
 Ruben
 Rubin
-Ruby
 Rudd
 Ruddie
 Ruddy
@@ -2261,14 +2193,12 @@ Sanders
 Sanderson
 Sandor
 Sandro
-Sandy
 Sanford
 Sanson
 Sansone
 Sarge
 Sargent
 Sascha
-Sasha
 Saul
 Sauncho
 Saunder
@@ -2316,7 +2246,6 @@ Shamus
 Shanan
 Shane
 Shannan
-Shannon
 Shaughn
 Shaun
 Shaw
@@ -2328,11 +2257,9 @@ Sheff
 Sheffie
 Sheffield
 Sheffy
-Shelby
 Shelden
 Sheldon
 Shell
-Shelley
 Shelton
 Shem
 Shep
@@ -2377,7 +2304,6 @@ Sim
 Simeon
 Simmonds
 Simon
-Simone
 Sinclair
 Sinclare
 Sivert
@@ -2471,7 +2397,6 @@ Sutton
 Sven
 Swen
 Syd
-Sydney
 Sylvan
 Sylvester
 Tab
@@ -2495,7 +2420,6 @@ Tally
 Tam
 Tamas
 Tammie
-Tammy
 Tan
 Tann
 Tanner
@@ -2620,10 +2544,7 @@ Towney
 Townie
 Townsend
 Towny
-Trace
 Tracey
-Tracie
-Tracy
 Traver
 Travers
 Travis
@@ -2691,7 +2612,6 @@ Val
 Valdemar
 Vale
 Valentin
-Valentine
 Van
 Vance
 Vasili
