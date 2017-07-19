@@ -25,7 +25,7 @@ import csv
 
 ## Get the company links from the spreadsheet
 company_links = []
-with open('C:/Users/abagh/VIP_Companies.csv', 'rb') as csvfile:
+with open('C:/Users/abagh/CREtech_Full_List_Premium_Insights.csv', 'rb') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=' ')
     for row in csv_reader:
             if len(row) == 0:
@@ -69,6 +69,7 @@ def login_linkedin(your_username, your_password):
     password = driver.find_element_by_id('session_password-login')  # Get password box
     password.send_keys(your_password)  # Enter your password
     password.submit()
+    print 'logged in: ' + your_username
     time.sleep(7)
     # Capcha
     if 'a quick security' in driver.page_source:
@@ -88,13 +89,14 @@ page_string = '&page='  # Used to go to the next page manually via url parameter
 # *************************************************************************** #
 # ***************LOGIN TO ALL OF THEM IN YOUR VPN LOC TO AVOID PIN*********** #
 # *************************************************************************** #
-usernameArray = ['dantrinet1@defhacks.io', 'dantrinet2@defhacks.io', 'dantrinet3@defhacks.io', 'dantrinet4@defhacks.io']
-passwordsArray = ['bnbmanysuccess200', 'dantrinet', 'dantrinet', 'dantrinet4']
+usernameArray = ['dantrinet3@defhacks.io', 'dantrinet4@defhacks.io']
+passwordsArray = ['dantrinet', 'dantrinet4']
 # *************************************************************************** #
 # *************************************************************************** #
 # *************************************************************************** #
 loginsUsed = 0
 login_linkedin(usernameArray[loginsUsed], passwordsArray[loginsUsed])
+storeCount = 0
 for company_link in company_links:  # Loop through each link for each company
     if loginsUsed >= len(usernameArray):
         break
@@ -147,6 +149,8 @@ for company_link in company_links:  # Loop through each link for each company
             if 'No results found' in driver.page_source or 'account has been restricted' in driver.page_source:
                 continue
             else:
+                driver.get(company_link)  # Open up the employee page
+                time.sleep(uniform(3, 5))
                 break
     if loginsUsed >= len(usernameArray):
         break
@@ -174,24 +178,33 @@ for company_link in company_links:  # Loop through each link for each company
         page_count += 1     # Debugging purposes
         print page_count
         driver.get(company_link + '&page=' + str(page_num))  # Go to the corresponding company page
-        time.sleep(uniform(.25, 4))  # Throttle
+        time.sleep(uniform(3, 9))  # Throttle
+        pageSource = driver.page_source
+        if 'No results found' in pageSource or 'account has been restricted' in pageSource:
+            if 'No results found' in driver.page_source:
+                print 'No results found: ' + usernameArray[loginsUsed]
+            else:
+                print 'Account Restricted: ' + usernameArray[loginsUsed]
+            driver.save_screenshot('No results ' + str(page_num))
+            # Logout link
+            driver.get(
+                'https://www.linkedin.com/m/logout/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_top%3BHd0EXRkpRdmjySf3ndvehg%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_search_srp_top-nav.settings_signout')
+            time.sleep(8)
+            loginsUsed += 1
+            if loginsUsed >= len(usernameArray):
+                break
+            else:
+                login_linkedin(usernameArray[loginsUsed], passwordsArray[loginsUsed])
+                raw_input('change your vpn to be safe, then press enter')
+                continue
+        if 'site cannot be' in driver.page_source or 'is no internet connection' in driver.page_source:
+            time.sleep(100)
+            dummy_text = raw_input('No internet')
+            continue
         try:
             driver.find_elements_by_xpath('//div[@class="search-result__actions"]') # Wait for the "connect" button to load
         except (NoSuchElementException, TimeoutException):
-            pageSource = driver.page_source
-            if 'No results found' in driver.page_source or 'account has been restricted' in driver.page_source:
-                if 'No results found' in driver.page_source:
-                    print 'No results found' + usernameArray[loginsUsed]
-                else:
-                    print 'Account Restricted: ' + usernameArray[loginsUsed]
-                # Logout link
-                driver.get('https://www.linkedin.com/m/logout/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_top%3BHd0EXRkpRdmjySf3ndvehg%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_search_srp_top-nav.settings_signout')
-                time.sleep(8)
-                loginsUsed += 1
-                if loginsUsed >= len(usernameArray):
-                    break
-                else:
-                    login_linkedin(usernameArray[loginsUsed], passwordsArray[loginsUsed])
+            print 'should be no results found'
             continue
         driver.execute_script(
             "window.scrollTo(0, " + str((randint(300, 800))) + ");")  # Scroll down to the bottom of the page
@@ -202,11 +215,29 @@ for company_link in company_links:  # Loop through each link for each company
             time.sleep(uniform(.1, 1.1))
         else:
             time.sleep(uniform(2, 4))
-            wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'active')))  # Wait until the page number bar at the bottom loads after scrolling
+            try:
+                driver.find_element_by_class_name('active')  # Wait until the page number bar at the bottom loads after scrolling
+            except (NoSuchElementException, TimeoutException):
+                print 'ip blocked?'
+                print driver.page_source
+                time.sleep(100)
+                dummy_stall = raw_input('IP Blocked, change IP')
+                continue
         for name in driver.find_elements_by_xpath(
                 '//span[contains(@class, "actor-name")]'):  # Find all spans with class = "actor-name"
             employee_names.append(name.text)
         time.sleep(uniform(.5, 2))
+        if len(driver.find_elements_by_xpath('//span[contains(@class, "actor-name")]')) == 0:
+            storeCount += 1
+        if storeCount >= 4:
+            storeCount = 0
+            driver.get('https://www.linkedin.com/m/logout/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_top%3BHd0EXRkpRdmjySf3ndvehg%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_search_srp_top-nav.settings_signout')
+            time.sleep(8)
+            loginsUsed += 1
+            if loginsUsed >= len(usernameArray):
+                break
+            else:
+                login_linkedin(usernameArray[loginsUsed], passwordsArray[loginsUsed])
     if len(employee_names) >= 1:
         male_count = 0
         female_count = 0

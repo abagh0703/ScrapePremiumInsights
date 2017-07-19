@@ -11,29 +11,23 @@ import math
 from random import *
 import csv
 
-# //div[contains(@class, "org-insights-module__facts")]
-
 csv_content = []
-# header_content = []   # Add the names to an array 'Total Employees', '6 Month Growth', '1 Year Growth', '2 Year Growth'
-header_content = ['company_link', 'company_name', u'General total employees', u'General 6m growth', u'General 1y growth', u'General 2y growth', u'Headcount growth Sales_6m', u'Headcount growth Sales_1y', u'Headcount growth Engineering_6m', u'Headcount growth Engineering_1y', u'Headcount growth Business Development_6m', u'Headcount growth Business Development_1y', u'Headcount growth Information Technology_6m', u'Headcount growth Information Technology_1y', u'Headcount growth Arts and Design_6m', u'Headcount growth Arts and Design_1y', u'Headcount growth Entrepreneurship_6m', u'Headcount growth Entrepreneurship_1y', u'Headcount growth Finance_6m', u'Headcount growth Finance_1y', u'Headcount growth Human Resources_6m', u'Headcount growth Human Resources_1y', u'Headcount growth Marketing_6m', u'Headcount growth Marketing_1y', u'Headcount growth Media and Communication_6m', u'Headcount growth Media and Communication_1y', u'Headcount growth Operations_6m', u'Headcount growth Operations_1y', u'Headcount growth Product Management_6m', u'Headcount growth Product Management_1y', u'Headcount growth Program and Project Management_6m', u'Headcount growth Program and Project Management_1y', u'Headcount growth Quality Assurance_6m', u'Headcount growth Quality Assurance_1y', u'Headcount growth Support_6m', u'Headcount growth Support_1y', u'Job openings growth Sales_3m', u'Job openings growth Sales_6m', u'Job openings growth Sales_1y', u'Job openings growth Accounting_3m', u'Job openings growth Accounting_6m', u'Job openings growth Accounting_1y', u'Job openings growth Engineering_3m', u'Job openings growth Engineering_6m', u'Job openings growth Engineering_1y', u'Job openings growth Arts and Design_3m', u'Job openings growth Arts and Design_6m', u'Job openings growth Arts and Design_1y', u'Job openings growth Business Development_3m', u'Job openings growth Business Development_6m', u'Job openings growth Business Development_1y', u'Job openings growth Finance_3m', u'Job openings growth Finance_6m', u'Job openings growth Finance_1y', u'Job openings growth Information Technology_3m', u'Job openings growth Information Technology_6m', u'Job openings growth Information Technology_1y', u'Job openings growth Marketing_3m', u'Job openings growth Marketing_6m', u'Job openings growth Marketing_1y', u'Job openings growth Support_3m', u'Job openings growth Support_6m', u'Job openings growth Support_1y', u'Job openings growth Other_3m', u'Job openings growth Other_6m', u'Job openings growth Other_1y', u'Headcount growth Administrative_6m', u'Headcount growth Administrative_1y', u'Headcount growth Legal_6m', u'Headcount growth Legal_1y', u'Headcount growth Research_6m', u'Headcount growth Research_1y', u'Job openings growth Research_3m', u'Job openings growth Research_6m', u'Job openings growth Research_1y', u'Headcount growth Community and Social Services_6m', u'Headcount growth Community and Social Services_1y', u'Headcount growth Accounting_6m', u'Headcount growth Accounting_1y', u'Headcount growth Consulting_6m', u'Headcount growth Consulting_1y', u'Job openings growth Human Resources_3m', u'Job openings growth Human Resources_6m', u'Job openings growth Human Resources_1y', 'Error', u'Headcount growth Real Estate_6m', u'Headcount growth Real Estate_1y', u'Job openings growth Education_3m', u'Job openings growth Education_6m', u'Job openings growth Education_1y', u'Job openings growth Legal_3m', u'Job openings growth Legal_6m', u'Job openings growth Legal_1y', u'Job openings growth Media and Communication_3m', u'Job openings growth Media and Communication_6m', u'Job openings growth Media and Communication_1y', u'Job openings growth Real Estate_3m', u'Job openings growth Real Estate_6m', u'Job openings growth Real Estate_1y', u'Job openings growth Operations_3m', u'Job openings growth Operations_6m', u'Job openings growth Operations_1y', u'Job openings growth Administrative_3m', u'Job openings growth Administrative_6m', u'Job openings growth Administrative_1y', u'Job openings growth Entrepreneurship_3m', u'Job openings growth Entrepreneurship_6m', u'Job openings growth Entrepreneurship_1y', u'Job openings growth Product Management_3m', u'Job openings growth Product Management_6m', u'Job openings growth Product Management_1y', u'Job openings growth Program and Project Management_3m', u'Job openings growth Program and Project Management_6m', u'Job openings growth Program and Project Management_1y', u'Headcount growth Education_6m', u'Headcount growth Education_1y', u'Job openings growth Quality Assurance_3m', u'Job openings growth Quality Assurance_6m', u'Job openings growth Quality Assurance_1y', u'Headcount growth Purchasing_6m', u'Headcount growth Purchasing_1y', u'Job openings growth Consulting_3m', u'Job openings growth Consulting_6m', u'Job openings growth Consulting_1y']
+header_content = ['company_link', 'company_name', 'average_tenure']
 master_array = []
 
 ## Get the company links from the spreadsheet
 company_links = []
-with open('C:/Users/abagh/CREtech_Full_Trial_2.csv', 'rb') as csvfile:
+with open('C:/Users/abagh/CREtech_Full_List_Premium_Insights.csv', 'rb') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=' ')
     for row in csv_reader:
             if len(row) == 0:
                 company_links.append('')
-                print ''
             elif 'company-beta' in row[0]:
                 company_links.append(row[0])
-                print row[0]
             else:
                 company_id = row[0].replace('https://www.linkedin.com/search/results/people/?facetCurrentCompany=%5B%22', '')  # get only the id
                 company_id = company_id.replace('%22%5D', '')   # again removing unnecessary stuff
                 company_links.append('https://www.linkedin.com/company-beta/' + company_id + '/')
-                print 'https://www.linkedin.com/company-beta/' + company_id + '/'
 print len(company_links)
 
 def clean_growth(raw_growth):
@@ -77,31 +71,29 @@ driver.get(
 wait.until(EC.presence_of_element_located((By.ID, 'btn-primary')))  # Wait for the sign in button to load first
 
 login = driver.find_element_by_id('session_key-login')  # Get username box
-login.send_keys('')  # Enter username
+login.send_keys('dantrinet3@defhacks.io')  # Enter username
 password = driver.find_element_by_id('session_password-login')  # Get password box
-password.send_keys('')  # Enter your password
+password.send_keys('dantrinet')  # Enter your password
 password.submit()
 time.sleep(7)
 
-driver_source = driver.page_source
-if 'pin' in driver_source:
+
+if 'a quick security' in driver.page_source:
+    raw_input("A quick security check")
+    time.sleep(30)
+
+if 'pin' in driver.page_source:
     pin = driver.find_element_by_id("verification-code")
     pin.send_keys(raw_input("Enter pin"))
     pin.submit()
     time.sleep(10)
 
-if 'a quick security' in driver_source:
-    raw_input("A quick security check")
-    time.sleep(30)
-## When signing in from a new location
-# pin = driver.find_element_by_id("verification-code")
-# pin.send_keys(raw_input("Enter pin"))
-# pin.submit()
-# time.sleep(10)
+
 for company_link in company_links:  # Loop through each link for each company
     company_stats = []  # Where their names will be stored
     if company_link == '':    # If the company is a blank string
         add_to_stats('Error', 'No link')
+        print 'no link'
         add_to_stats('company_link', 'None')
         master_array.append(company_stats)
         continue
@@ -124,9 +116,12 @@ for company_link in company_links:  # Loop through each link for each company
         "window.scrollTo(0, " + str((randint(900, 1000))) + ");")  # Scroll down to the mid page
     time.sleep(uniform(2, 4))  # Throttle, allow content to load
     try:    # employee headcount
-        # employee_count = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//span[contains(@class, "Sans-17px-black-85%-semibold")]')))  # Wait for the total search results box to load
-        # employee_count = employee_count[0].text
-        # # add_to_stats('employee_count', employee_count)
+        avg_ten = driver.find_element_by_xpath('//div[contains(@class, "org-insights-module__facts")]').text
+        avg_ten = avg_ten.replace('Average tenure', '')
+        avg_ten = avg_ten.replace(' years', '')
+        add_to_stats('average_tenure', avg_ten)
+        print 'ten: ' + avg_ten
+        time.sleep(uniform(2, 4))
         test_for_basics = driver.find_element_by_xpath('//table[contains(@class, "org-insights-module__summary-table")]/tr[1]')
         employee_growth = driver.find_elements_by_xpath('//table[contains(@class, "org-insights-module__summary-table")]/tr[1]/td')
         values = []
@@ -136,7 +131,9 @@ for company_link in company_links:  # Loop through each link for each company
         for i in range(0, len(employee_growth_names)):
             add_to_stats('General ' + employee_growth_names[i].text, values[i])
     except (NoSuchElementException, TimeoutException):
-        pass
+        add_to_stats('Error', 'No Tenure Option')
+        master_array.append(company_stats)
+        continue
     try:    # employee distribution
         button = driver.find_element_by_xpath('//button[contains(@class, "org-insights-premium-dropdown__trigger")]')    ## Get the employee distribution table
         button.send_keys(webdriver.common.keys.Keys.SPACE)
@@ -194,13 +191,11 @@ for company_link in company_links:  # Loop through each link for each company
                 add_to_stats(category_name.text + ' ' + job_openings_names[i].text + '_' + distribution_growth_names[2].text.encode('utf-8'), distribution_growth_array[i * number_of_time_categories + 2])
     except (NoSuchElementException, TimeoutException):
             pass
-    print company_stats
     print header_content
-    with open("C:/Users/abagh/results_company_pages.csv", "wb") as csv_file:
+    with open("C:/Users/abagh/tenure.csv", "wb") as csv_file:
         writer = csv.writer(csv_file, delimiter=',')
         master_array.append(company_stats)
         writer.writerow(header_content)
         for row in master_array:
             writer.writerow(row)
 print 'done!!!'
-driver.close()
