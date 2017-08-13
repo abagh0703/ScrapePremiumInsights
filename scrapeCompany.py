@@ -89,8 +89,8 @@ page_string = '&page='  # Used to go to the next page manually via url parameter
 # *************************************************************************** #
 # ***************LOGIN TO ALL OF THEM IN YOUR VPN LOC TO AVOID PIN*********** #
 # *************************************************************************** #
-usernameArray = ['dantrinet3@defhacks.io', 'dantrinet4@defhacks.io']
-passwordsArray = ['dantrinet', 'dantrinet4']
+usernameArray = ['Your Email', 'Your Second Email Account (if you have one)']
+passwordsArray = ['Your Password', 'Your Second Password']
 # *************************************************************************** #
 # *************************************************************************** #
 # *************************************************************************** #
